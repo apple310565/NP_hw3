@@ -105,7 +105,7 @@ int main(int argc ,char *argv[])
 		}
 		else 
 		{
-			printf("Usage: sudo ./getpacket -r packet_file\n");
+			printf("Usage: \nsudo ./getpacket -r packet_file\nsudo ./getpacket -n packet_num\n");
 			return 0;
 		}
 	}
