@@ -111,7 +111,6 @@ int main(int argc ,char *argv[])
 	}
 
 
-	/* wait loop forever */
 	int id = 0,i;
 	pcap_loop(device, n, getPacket, (u_char*)&id);
 	printf("--------------------------------------\n");
