@@ -85,7 +85,6 @@ int main(int argc ,char *argv[])
 		exit(1);
 	}
 
-	/* open a device, wait until a packet arrives */
 	pcap_t *device = pcap_open_live(devStr, 65535, 1, 0, errBuf);
 	if(argc==3)
 	{
@@ -96,7 +95,7 @@ int main(int argc ,char *argv[])
 			if(!device) {
 				fprintf(stderr, "pcap_open_offline(): %s\n", errBuf);
 				exit(1);
-			}//end if
+			}
 			printf("Open: %s\n", filename);
 		}
 		else if(strcmp(argv[1],"-n")==0)
