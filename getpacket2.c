@@ -40,9 +40,9 @@ void getPacket(u_char * arg, const struct pcap_pkthdr * pkthdr, const u_char * p
 		if(packet[23]==6)printf("TCP\n");
 		else if(packet[23]==17)printf("UDP\n");
 		else printf("Else\n");
-		
+		if(packet[23]==6||packet[23]==17){
 		printf("Src port: %d\n",packet[34]*256+packet[35]);
-		printf("Dst port: %d\n",packet[36]*256+packet[37]);
+		printf("Dst port: %d\n",packet[36]*256+packet[37]);}
 		sprintf(tmp,"[%d.%d.%d.%d] to [%d.%d.%d.%d]\0",packet[26],packet[27],packet[28],packet[29],packet[30],packet[31],packet[32],packet[33]);
 		
 		int flag=0;
